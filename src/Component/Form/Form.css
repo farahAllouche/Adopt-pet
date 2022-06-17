@@ -1,0 +1,28 @@
+.form-pet-container {
+    margin-top: 20px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-pet-container a {
+    color: var(--kata);
+    text-decoration: underline;
+    display: inline;
+}
+
+.form-pet-container p {
+    color: var(--teemo);
+}
+
+
+.age-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hidden-form {
+    display: none;
+}

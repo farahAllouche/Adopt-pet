@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+:root {
+  --viego: #ede7e0;
+  --kata : #7b1818;
+  --teemo : #746452;
+  --kayn: #6f6f6f;
+  --black : #0c0c0c;
+}
+
+.Home-page {
+    font-family: 'Nunito', sans-serif;
+    color: var(--black);
+    margin-top: 80px;
+}
+
+.Home-page .page-title .title-content,.Home-page .page-title .title-content .append-title  {
+    font-family: 'Lobster Two', cursive;
+    font-size: 62px;
+    display: flex;
+    margin-bottom: 10px;
+    
+    
+}
+.Home-page .btn-container {
+    display: flex;
+    gap: 20px;
+    padding-left: 10px;
+}
+
+.Home-page .subtitle {
+    color: var(--teemo);
+    font-weight: bold;
+    padding: 0 20px 50px 10px;
+    
+}
+

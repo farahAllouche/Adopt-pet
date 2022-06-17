@@ -1,0 +1,118 @@
+.description-page {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+
+    
+    
+}
+
+.description-page .pet-intro {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    line-height: 2em; 
+    color: white;
+    align-items: stretch;
+    max-height: 200px;
+    
+}
+.description-page .pet-intro .pet-hi {
+    background-color: var(--bgteemo2);
+    padding: 20px;
+    font-weight: 600;
+    font-size: 1.3em;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 3px;
+}
+
+.description-page .info-pet {
+    width: 50%;
+    box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+    padding: 20px ;
+    border-radius: 3px;
+    font-weight: 600;
+    
+}
+
+.description-page .info-pet .row-info {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.description-page .info-pet .row-info .column1 {
+    width: 90px;
+    color: var(--teemo);
+}
+.description-page .about-pet {
+    width: 140%;
+    padding: 20px;
+    white-space: pre-line;
+    line-height: 1.5em; 
+}
+
+.description-page .about-pet div {
+    margin-bottom: 20px;
+    padding: 10px 0 ;
+}
+
+.description-page  .pet-pict {
+    border-radius: 3px;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .description-page .pet-intro  img {
+    height:inherit;
+    width: 250px;
+    object-fit : cover;
+    border-radius: 3px;
+  }
+.description-page .infoNabout-pet {
+    display: flex;
+    gap: 20px
+}
+  .description-page  h1 {
+
+    font-size: 1.4em;
+    padding: 7px 0;
+    
+}
+
+.info-pet h1 {
+    color: var(--teemo);
+}
+
+.bg-modal {
+    background-color: rgba(29, 33, 37, 0.8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.bg-modal .photo-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+}
+.bg-modal .photo-container img {
+    max-height: 460px;
+
+}
+.photo-box-quit {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: var(--bgviego);
+    border-radius: 50%;
+
+  }
+.photo-box-quit .quit-btn {
+    cursor: pointer;
+  }
+  

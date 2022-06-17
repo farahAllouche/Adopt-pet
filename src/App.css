@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,800;1,500&display=swap');
+:root {
+  --viego: #ede7e0;
+  --bgviego: #ede7e0be;
+  --kata : #7b1818;
+  --teemo : #746452;
+  --bgteemo2 : #746452c2;
+  --kayn: #6f6f6f;
+  --black : #0c0c0c;
+  --bgkata : #833b3b8f;
+  --kalista :#45bd62;
+  --bgteemo : #8f7b65;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
+    
+
+}
+body {
+  font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+  
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.page-containt {
+  display: flex;
+  padding: 20px 120px 0 120px;
+  flex-grow: 1;
+  width: 100%;
+  padding-bottom: 20px;
+
+}
+
+.page-containt.withBg {
+  background: url(../images/bg-image.jpg)  center center / cover no-repeat fixed;
+  color: var(--viego);
+}
+.page-containt.noBg {
+  background-color: var(--viego);
+  color: var(--black);
+}
+
+.App {
+  display: flex;
+  min-height: 100vh;
+
+  
+}

@@ -1,0 +1,66 @@
+.adopt-page {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    
+}
+
+.adopt-page .All-pet {
+    flex-grow: 1;
+}
+.adopt-page .avaible-pets {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    gap: 20px;
+    
+}
+.adopt-page .pet-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+.card {
+    position: relative;
+}
+.card .card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .card-header div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.card .info-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 3px;
+    color: var(--teemo);
+}
+
+.card .edit-but  {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background-color: var(--bgviego);
+    border-radius: 50%;
+}
+
+.card .delete-but {
+    position: absolute;
+    top: 45px;
+    right: 2px;
+    background-color: var(--bgviego);
+    border-radius: 50%;
+
+}
+
+.card .cap {
+    text-transform:capitalize;
+}

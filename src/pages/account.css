@@ -1,0 +1,54 @@
+.account-settings {
+    display: flex;
+}
+
+#simple-tabpanel-0,#simple-tabpanel-1  {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.account-settings .account-img {
+    width: 200px;
+    min-height: 200px;
+    border: 1px dashed var(--teemo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.account-settings .account-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+}
+
+
+
+.save-btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#image-container {
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter: opacity(80%);
+}
+
+.image-from-control {
+    filter : initial
+
+}
+
+.account-settings .avaible-pets {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    gap: 20px;
+}

@@ -1,0 +1,68 @@
+.user-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 50px;
+    gap: 30px;
+
+}
+
+.user-page .container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 15px;
+    border-radius: 3px;
+
+}
+
+.user-page .information {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-page .personal-info, .contact-info {
+    padding: 0 0 20px 0;
+}
+
+.user-page a  {
+    display: inline;
+    color: var(--teemo);
+}
+
+.user-page h1 {
+    padding: 5px 0;
+}
+
+
+.user-page img {
+    height: 120px;
+    width: 120px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+.user-page .contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-page .leftCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+.user-page .image-bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+

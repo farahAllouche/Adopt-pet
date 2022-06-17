@@ -1,0 +1,25 @@
+.filter-page {
+    width: 250px;
+    height: fit-content;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 3px;
+}
+.filter-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
+}
+
+.filter-form .title {
+    display: flex;
+    justify-content: center;
+    color: var(--kata);
+    margin-bottom: 20px;
+}
+
+.filter-form .button-wrapper {
+    display: flex;
+    justify-content: space-between;
+}

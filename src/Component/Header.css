@@ -1,0 +1,78 @@
+
+header.content *{
+  color: var(--black) ;
+}
+header .main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+header.content .main-nav .nav-links .profil-link{
+  color: var(--black) ;
+}
+
+a {
+
+  text-decoration: none;
+  color: inherit;
+}
+header span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  gap: 5px;
+}
+
+header .main-nav .logo-img img {
+  height:50px ;
+}
+header .main-nav .nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+
+}
+header .main-nav .nav-links li {
+  display: flex;
+  align-items: center;
+}
+header .main-nav .nav-links .profil-link{
+  padding-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+header .main-nav .nav-links .profil-link span {
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+header .main-nav .nav-links .profil-link span a {
+  text-decoration: none;
+  color: var(--viego);
+  font-family: 'Nunito', sans-serif;  
+  font-size: 20px;
+}
+header .main-nav .nav-links .profil-link:hover {
+  cursor: pointer;
+  color: var(--teemo);
+}
+header .main-nav .nav-links .hamburger {
+  margin-left: 40px;
+  padding: 10px;
+  
+}
+header .main-nav .nav-links .hamburger:hover{
+  cursor: pointer;
+  color: var(--viego);
+  background-color: var(--teemo);
+  border-radius: 50%;
+}
+
+
+

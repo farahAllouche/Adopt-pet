@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap');
+
+.not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    font-weight: 700;
+    font-size: 2.5em;
+    color: var(--kata);
+
+}

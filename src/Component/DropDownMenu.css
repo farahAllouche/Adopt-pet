@@ -1,0 +1,54 @@
+.drop-down-menu {
+    max-width: 300px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.drop-down-menu .btn-menu {
+    font-weight: 100;
+    font-size: 1em;
+    border: 1px solid var(--teemo);
+    color: var(--teemo);
+    margin: 1px;
+}
+
+.drop-down-menu .btn-menu:focus {
+    border: 2px solid var(--teemo);
+}
+.drop-down-menu .subMenu {
+    
+    
+
+    transition: height 0.4s ease-in-out;
+    height: 0;
+    width: fit-content;
+
+}
+.drop-down-menu .subMenu ul {
+    
+    list-style: none;
+    width: fit-content;
+    margin: 0;
+    box-sizing: border-box;
+}
+.drop-down-menu .subMenu ul li {
+    color: var(--viego);
+    font-weight: bold;
+    padding: 4px 30px;
+    background-color: var(--teemo);
+    
+}
+.drop-down-menu .subMenu ul li:hover {
+    background-color: var(--bgteemo);
+    cursor: pointer;
+}
+
+.drop-down-menu .subMenu ul li:first-child {
+    border-radius: 0.5rem 0.5rem 0 0  ;
+}
+
+.drop-down-menu .subMenu ul li:last-child {
+    border-radius: 0 0 0.5rem 0.5rem   ;
+}

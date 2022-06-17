@@ -1,0 +1,131 @@
+.side-bar {
+    background-color: var(--teemo);
+    width: 250px;
+    padding: 10px 10px 0 10px;
+    color: var(--viego);
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    
+}
+
+.side-bar.show {
+    animation: sidebar_slide 1s ease forwards;
+}
+
+@keyframes sidebar_slide {
+    0%{
+        transform: translateX(100%);
+    }
+    40%{
+        transform: translateX(-10%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+
+    
+}
+.side-bar.hide {
+    animation: sidebar-hide 1s ease forwards;
+}
+
+@keyframes sidebar-hide {
+    0%{
+        transform: translateX(0px);
+        visibility: hidden;
+    }
+    40%{
+        transform: translateX(0);
+        visibility: hidden;
+    }
+    100%{
+        transform: translateX(
+            100%);
+            height:0px;width:0px;
+        visibility: hidden;
+            
+            padding: 0;
+            
+            
+
+    }
+
+    
+}
+
+.side-bar.hidden{
+    display: none;
+}
+
+.quit-icon {
+    display: flex;
+    justify-content: flex-end;
+}
+.quit-icon span {
+    cursor: pointer;
+}
+.profile-info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-left: 30px;
+    margin-top: 40px;
+}
+.profile-info .img-container {
+    border: 3px solid var(--kalista);
+    border-radius: 50%;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.profile-info .img-container .active-profile {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: var(--kalista);
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    border: 4px solid var(--teemo);
+    z-index: -2;
+}
+
+.profile-info img {
+    width: 60px;
+    border-radius: 50%;
+  box-shadow: rgba(139, 119, 89, 0.2) 0px 7px 29px 0px;
+  z-index: -5;
+}
+
+.profile-info h3 {
+    font-family: 'Lobster Two', cursive;
+    font-size: 1.5em;
+}
+.img-dog img {
+    width: 240px;
+}
+.links-container {
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+.links-container ul {
+    list-style: none;
+}
+.links-container ul li {
+    padding: 20px 0;
+    font-size: 1.2em;
+}
+
+.img-dog {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
