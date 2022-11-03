@@ -25,20 +25,21 @@ export default function Header({ setSideBar, sideBar, style }) {
         withCredentials: true,
       })
       .then((res) => {
-        console.log(res.data);
+        console.log("logout", res.data);
         dispatch(signOut());
+        //navigator("login", { replace: true });
       })
       .catch((error) => setError(error.response));
   }
 
   const profile = isLogged ? (
     <>
-      <a href="/login" onClick={handleLogout}>
+      <Link to="/">
         <span onClick={handleLogout}>
           Log out
           <FiLogOut />
         </span>
-      </a>
+      </Link>
     </>
   ) : (
     <>
