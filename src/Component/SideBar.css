@@ -1,3 +1,13 @@
+.bg-modal {
+    background-color: rgba(29, 33, 37, 0.8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 .side-bar {
     background-color: var(--teemo);
     width: 250px;
@@ -7,6 +17,9 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
+    position : fixed;
+    right: 0;
+    top: 0;
 
     
 }
