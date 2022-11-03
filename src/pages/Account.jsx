@@ -103,7 +103,7 @@ export default function Account() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/account`, {
+      .get(`https://cat-dog-adoption.herokuapp.com/account`, {
         withCredentials: true,
       })
       .then((res) => {
@@ -178,7 +178,7 @@ export default function Account() {
     account.photo || delete account["photo"];
     console.log(account);
     axios
-      .patch(`http://localhost:4000/account`, account, {
+      .patch(`https://cat-dog-adoption.herokuapp.com/account`, account, {
         withCredentials: true,
       })
       .then((res) => {

@@ -37,7 +37,7 @@ export default function MediaCard({ pet, userFav = false }) {
 
   function handleDelete() {
     axios
-      .delete(`http://localhost:4000/pets/delete/${pet.id}`, {
+      .delete(`https://cat-dog-adoption.herokuapp.com/pets/delete/${pet.id}`, {
         withCredentials: true,
       })
       .then((res) => {
@@ -56,7 +56,7 @@ export default function MediaCard({ pet, userFav = false }) {
 
     axios
       .patch(
-        `http://localhost:4000/userInterest`,
+        `https://cat-dog-adoption.herokuapp.com/userInterest`,
         { fav: newFavs },
         {
           withCredentials: true,

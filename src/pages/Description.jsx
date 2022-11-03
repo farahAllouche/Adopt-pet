@@ -23,7 +23,7 @@ export default function Description() {
     dispatch(switchBg(false));
     axios
       .post(
-        `http://localhost:4000/pets/`,
+        `https://cat-dog-adoption.herokuapp.com/pets/`,
         { id: petId },
         {
           withCredentials: true,

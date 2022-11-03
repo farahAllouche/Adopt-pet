@@ -76,7 +76,7 @@ export default function CardLost({ pet }) {
   useEffect(() => {
     axios
       .post(
-        `http://localhost:4000/user`,
+        `https://cat-dog-adoption.herokuapp.com/user`,
         { userId: pet.userId },
         {
           withCredentials: true,
@@ -99,9 +99,12 @@ export default function CardLost({ pet }) {
 
   function handleDelete() {
     axios
-      .delete(`http://localhost:4000/lostPet/delete/${pet.id}`, {
-        withCredentials: true,
-      })
+      .delete(
+        `https://cat-dog-adoption.herokuapp.com/lostPet/delete/${pet.id}`,
+        {
+          withCredentials: true,
+        }
+      )
       .then((res) => {
         const newPets = lostPets.filter((p) => p.id != pet.id);
         console.log("newPets", newPets);
