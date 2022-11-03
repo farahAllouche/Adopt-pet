@@ -1,4 +1,4 @@
-import loggedReducer from "./LoggedReducer";
+import loggedReducer from "./loggedReducer";
 import petsReducer from "./petsReducer";
 import lostpetsReducer from "./LostPetsReducer";
 import BgReducer from "./BgReducer";
