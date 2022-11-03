@@ -13,8 +13,7 @@
 .adopt-page .avaible-pets {
     display: grid;
     grid-template-columns: repeat(auto-fill, 250px);
-    gap: 20px;
-    
+    gap: 35px; 
 }
 .adopt-page .pet-header {
     display: flex;

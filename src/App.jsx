@@ -14,10 +14,13 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import axios from "axios";
 import Account from "./pages/Account";
 import { useDispatch, useSelector } from "react-redux";
-import { signIn, setPets, setFavPets } from "./actions";
+import { signIn, setPets, setFavPets, setLostPets } from "./actions";
 import Description from "./pages/Description";
 import Update from "./pages/Update";
 import User from "./pages/User";
+import AddLost from "./pages/AddLost";
+import LostPets from "./pages/LostPets";
+import UpdateLost from "./pages/UpdateLost";
 
 const theme = createTheme({
   palette: {
@@ -76,6 +79,19 @@ function App() {
         .then((res) => {
           console.log(res.data);
           dispatch(setPets(res.data));
+        })
+        .catch((error) => setError(error.response));
+  }, [isLogged.id]);
+
+  useEffect(() => {
+    isLogged &&
+      axios
+        .get(`http://localhost:4000/lostPet/`, {
+          withCredentials: true,
+        })
+        .then((res) => {
+          console.log(res.data);
+          dispatch(setLostPets(res.data));
         })
         .catch((error) => setError(error.response));
   }, [isLogged.id]);
@@ -164,6 +180,30 @@ function App() {
                 element={
                   <RequireAuth>
                     <User></User>
+                  </RequireAuth>
+                }
+              ></Route>
+              <Route
+                path="/lostPets"
+                element={
+                  <RequireAuth>
+                    <LostPets theme={theme}></LostPets>
+                  </RequireAuth>
+                }
+              ></Route>
+              <Route
+                path="/foundPet"
+                element={
+                  <RequireAuth>
+                    <AddLost></AddLost>
+                  </RequireAuth>
+                }
+              ></Route>
+              <Route
+                path="/UpdateLostPet/:petId"
+                element={
+                  <RequireAuth>
+                    <UpdateLost></UpdateLost>
                   </RequireAuth>
                 }
               ></Route>

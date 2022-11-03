@@ -19,7 +19,14 @@ import { States, allTowns, getTowns } from "../wilaya-comune";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import MyAutocomplete from "./AutoComplte";
 import { useDispatch, useSelector } from "react-redux";
-import { resetFilter, filterPets } from "../actions";
+import {
+  resetFilter,
+  filterPets,
+  filterLostPets,
+  resetLostFilter,
+} from "../actions";
+import Toolbar from "@mui/material/Toolbar";
+import AppBar from "@mui/material/AppBar";
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -56,7 +63,7 @@ function getStyles(name, personName, theme) {
   };
 }
 
-export default function Filter({ theme }) {
+export default function Filter({ theme, page }) {
   const formRef = useRef();
   const [spices, setSpices] = useState("");
   const [gender, setGender] = useState("");
@@ -69,19 +76,27 @@ export default function Filter({ theme }) {
   console.log("re render filter");
 
   const handleFilter = (e) => {
-    dispatch(resetFilter());
-
     e.preventDefault();
-    const newFilter = {
-      spices: spices ? spices : [],
-      gender: gender ? gender : [],
-      age: age ? age.map((a) => a.split(" ")[0]) : [],
-      address: address ? address : [],
-      behaviour: behaviour ? behaviour : [],
-    };
-    console.log(newFilter);
-
-    dispatch(filterPets(newFilter));
+    if (page == "adopt") {
+      dispatch(resetFilter());
+      const newFilter = {
+        spices: spices ? spices : [],
+        gender: gender ? gender : [],
+        age: age ? age.map((a) => a.split(" ")[0]) : [],
+        address: address ? address : [],
+        behaviour: behaviour ? behaviour : [],
+      };
+      console.log(newFilter);
+      dispatch(filterPets(newFilter));
+    } else {
+      dispatch(resetLostFilter());
+      const newFilter = {
+        spices: spices ? spices : [],
+        age: age ? age.map((a) => a.split(" ")[0]) : [],
+        address: address ? address : [],
+      };
+      dispatch(filterLostPets(newFilter));
+    }
   };
 
   return (
@@ -95,11 +110,14 @@ export default function Filter({ theme }) {
           title="Spices"
           setInput={setSpices}
         />
-        <MyAutocomplete
-          options={["male", "female"]}
-          title="Gender"
-          setInput={setGender}
-        />
+        {page == "adopt" && (
+          <MyAutocomplete
+            options={["male", "female"]}
+            title="Gender"
+            setInput={setGender}
+          />
+        )}
+
         <MyAutocomplete
           options={[
             "Young (< 6 months)",
@@ -114,11 +132,13 @@ export default function Filter({ theme }) {
           title="Address"
           setInput={setAddress}
         />
-        <MyAutocomplete
-          options={["Children", "Cats", "Dogs"]}
-          title="Can live wih"
-          setInput={setBehaviour}
-        />
+        {page == "adopt" && (
+          <MyAutocomplete
+            options={["Children", "Cats", "Dogs"]}
+            title="Can live wih"
+            setInput={setBehaviour}
+          />
+        )}
 
         <div className="button-wrapper">
           <Button color="secondary" variant="contained" type="submit">

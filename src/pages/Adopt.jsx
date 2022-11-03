@@ -74,7 +74,7 @@ export default function Adopt({ theme }) {
 
   return (
     <div className="adopt-page">
-      <Filter theme={theme} />
+      <Filter theme={theme} page="adopt" />
       <div className="All-pet">
         <div className="pet-header">
           <h1>{DispalyPets.length} pets found!</h1>

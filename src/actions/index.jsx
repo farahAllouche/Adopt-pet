@@ -45,6 +45,35 @@ export const resetFilter = () => {
   };
 };
 
+/******************* */
+
+export const addLostPet = (newPet) => {
+  return {
+    type: "ADDLOST",
+    payload: newPet,
+  };
+};
+
+export const setLostPets = (AllPets) => {
+  return {
+    type: "SETLOST",
+    payload: AllPets,
+  };
+};
+
+export const filterLostPets = (newFilter) => {
+  return {
+    type: "FILTERLOST",
+    payload: newFilter,
+  };
+};
+
+export const resetLostFilter = () => {
+  return {
+    type: "RESETFILTERLOST",
+  };
+};
+
 export const updateFavPets = (favPets) => {
   return {
     type: "UPDATE_FAV_PET",

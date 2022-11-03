@@ -1,0 +1,27 @@
+.lost-pet-page {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.lost-pet-page .lost-pet-wrapper {
+    flex-grow: 1;
+}
+
+.lost-pet-page .header {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.lost-pet-page .header Button {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    min-width: max-content
+}
+
+.appBar {
+    max-width: 300px;
+}

@@ -44,6 +44,9 @@ export default function SideBar({ setSideBar, sideBar }) {
             <Link to="/rehome">
               <li>Rehome your pet</li>
             </Link>
+            <Link to="/lostPets">
+              <li>Lost and found</li>
+            </Link>
           </ul>
         </div>
         <div className="img-dog">

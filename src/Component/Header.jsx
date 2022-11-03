@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { BsHeart, BsSearch } from "react-icons/bs";
 import { FaUser } from "react-icons/fa";
 import { FaAlignJustify } from "react-icons/fa";
@@ -13,6 +13,8 @@ import "./Header.css";
 import Button from "@mui/material/Button";
 
 export default function Header({ setSideBar, sideBar, style }) {
+  const [error, setError] = useState("");
+
   const navigator = useNavigate();
   const isLogged = useSelector((state) => state.isLogged.isLogged);
   const dispatch = useDispatch();
@@ -26,7 +28,7 @@ export default function Header({ setSideBar, sideBar, style }) {
         console.log(res.data);
         dispatch(signOut());
       })
-      .catch((error) => setError(error.response.data.message));
+      .catch((error) => setError(error.response));
   }
 
   const profile = isLogged ? (
