@@ -1,6 +1,6 @@
-import loggedReducer from "./loggedReducer";
+import loggedReducer from "./LoggedReducer";
 import petsReducer from "./petsReducer";
-import lostpetsReducer from "./lostpetsReducer";
+import lostpetsReducer from "./LostPetsReducer";
 import BgReducer from "./BgReducer";
 import FavReducer from "./FavReducer";
 import { combineReducers } from "redux";
