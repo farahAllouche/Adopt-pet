@@ -64,7 +64,7 @@ export default function Header({ setSideBar, sideBar, style }) {
         <nav className="main-nav">
           <div className="logo-img">
             <Link to="/">
-              <img src="/images/logo.png"></img>
+              <img src="/images/avatar.jpg"></img>
             </Link>
           </div>
           <ul className="nav-links">
