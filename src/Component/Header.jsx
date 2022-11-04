@@ -21,7 +21,7 @@ export default function Header({ setSideBar, sideBar, style }) {
 
   function handleLogout() {
     axios
-      .delete(`https://glittery-queijadas-ca1b16.netlify.app/logout`, {
+      .delete(`https://cat-dog-adoption.herokuapp.com/logout`, {
         withCredentials: true,
       })
       .then((res) => {

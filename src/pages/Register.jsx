@@ -35,7 +35,7 @@ export default function Register() {
     setError("");
     axios
       .post(
-        `https://glittery-queijadas-ca1b16.netlify.app/register`,
+        `https://cat-dog-adoption.herokuapp.com/register`,
         { email, password, name },
         {
           withCredentials: true,

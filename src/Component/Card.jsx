@@ -37,12 +37,9 @@ export default function MediaCard({ pet, userFav = false }) {
 
   function handleDelete() {
     axios
-      .delete(
-        `https://glittery-queijadas-ca1b16.netlify.app/pets/delete/${pet.id}`,
-        {
-          withCredentials: true,
-        }
-      )
+      .delete(`https://cat-dog-adoption.herokuapp.com/pets/delete/${pet.id}`, {
+        withCredentials: true,
+      })
       .then((res) => {
         console.log(res.data);
         const newPets = pets.filter((p) => p.id != pet.id);
@@ -59,7 +56,7 @@ export default function MediaCard({ pet, userFav = false }) {
 
     axios
       .patch(
-        `https://glittery-queijadas-ca1b16.netlify.app/userInterest`,
+        `https://cat-dog-adoption.herokuapp.com/userInterest`,
         { fav: newFavs },
         {
           withCredentials: true,

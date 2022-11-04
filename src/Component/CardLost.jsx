@@ -76,7 +76,7 @@ export default function CardLost({ pet }) {
   useEffect(() => {
     axios
       .post(
-        `https://glittery-queijadas-ca1b16.netlify.app/user`,
+        `https://cat-dog-adoption.herokuapp.com/user`,
         { userId: pet.userId },
         {
           withCredentials: true,
@@ -100,7 +100,7 @@ export default function CardLost({ pet }) {
   function handleDelete() {
     axios
       .delete(
-        `https://glittery-queijadas-ca1b16.netlify.app/lostPet/delete/${pet.id}`,
+        `https://cat-dog-adoption.herokuapp.com/lostPet/delete/${pet.id}`,
         {
           withCredentials: true,
         }

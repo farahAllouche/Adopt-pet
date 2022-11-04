@@ -25,7 +25,7 @@ export default function Login() {
     setError("");
     axios
       .post(
-        `https://glittery-queijadas-ca1b16.netlify.app/login`,
+        `https://cat-dog-adoption.herokuapp.com/login`,
         { email, password },
         {
           withCredentials: true,

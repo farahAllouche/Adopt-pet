@@ -55,7 +55,7 @@ function App() {
   useEffect(() => {
     console.log("useEffect");
     axios
-      .get(`https://glittery-queijadas-ca1b16.netlify.app/account`, {
+      .get(`https://cat-dog-adoption.herokuapp.com/account`, {
         withCredentials: true,
       })
       .then((res) => {
@@ -73,7 +73,7 @@ function App() {
   useEffect(() => {
     isLogged &&
       axios
-        .get(`https://glittery-queijadas-ca1b16.netlify.app/pets/`, {
+        .get(`https://cat-dog-adoption.herokuapp.com/pets/`, {
           withCredentials: true,
         })
         .then((res) => {
@@ -86,7 +86,7 @@ function App() {
   useEffect(() => {
     isLogged &&
       axios
-        .get(`https://glittery-queijadas-ca1b16.netlify.app/lostPet/`, {
+        .get(`https://cat-dog-adoption.herokuapp.com/lostPet/`, {
           withCredentials: true,
         })
         .then((res) => {
@@ -98,7 +98,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get(`https://glittery-queijadas-ca1b16.netlify.app/account`, {
+      .get(`https://cat-dog-adoption.herokuapp.com/account`, {
         withCredentials: true,
       })
       .then((res) => {

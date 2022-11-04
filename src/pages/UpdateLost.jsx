@@ -71,7 +71,7 @@ export default function AddLost() {
     dispatch(switchBg(false));
     axios
       .post(
-        `https://glittery-queijadas-ca1b16.netlify.app/Lostpet/`,
+        `https://cat-dog-adoption.herokuapp.com/Lostpet/`,
         { id: petId },
         {
           withCredentials: true,
@@ -129,7 +129,7 @@ export default function AddLost() {
   const toDataBase = (lostPet) => {
     axios
       .put(
-        `https://glittery-queijadas-ca1b16.netlify.app/lostPet/update/${petId}`,
+        `https://cat-dog-adoption.herokuapp.com/lostPet/update/${petId}`,
         lostPet,
         {
           withCredentials: true,

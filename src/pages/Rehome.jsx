@@ -66,7 +66,7 @@ export default function Rehome() {
 
   const toDataBase = (newPet) => {
     axios
-      .post(`https://glittery-queijadas-ca1b16.netlify.app/pets/add`, newPet, {
+      .post(`https://cat-dog-adoption.herokuapp.com/pets/add`, newPet, {
         withCredentials: true,
       })
       .then((res) => {

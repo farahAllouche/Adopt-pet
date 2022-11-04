@@ -31,12 +31,9 @@ export default function DraggableDialog({ petId }) {
 
   function handleDelete() {
     axios
-      .delete(
-        `https://glittery-queijadas-ca1b16.netlify.app/pets/delete/${petId}`,
-        {
-          withCredentials: true,
-        }
-      )
+      .delete(`https://cat-dog-adoption.herokuapp.com/pets/delete/${petId}`, {
+        withCredentials: true,
+      })
       .then((res) => {
         console.log(res.data);
         const newPets = pets.filter((p) => p.id != petId);
