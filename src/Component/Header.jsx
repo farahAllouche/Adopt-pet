@@ -21,7 +21,7 @@ export default function Header({ setSideBar, sideBar, style }) {
 
   function handleLogout() {
     axios
-      .delete(`https://cat-dog-adoption.herokuapp.com/logout`, {
+      .delete(`https://glittery-queijadas-ca1b16.netlify.app/logout`, {
         withCredentials: true,
       })
       .then((res) => {
@@ -64,7 +64,7 @@ export default function Header({ setSideBar, sideBar, style }) {
         <nav className="main-nav">
           <div className="logo-img">
             <Link to="/">
-              <img src="/images/avatar.jpg"></img>
+              <img src="/images/bg-image.jpg"></img>
             </Link>
           </div>
           <ul className="nav-links">
