@@ -103,7 +103,7 @@ export default function Account() {
 
   useEffect(() => {
     axios
-      .get(`https://cat-dog-adoption.herokuapp.com/account`, {
+      .get(`https://glittery-queijadas-ca1b16.netlify.app/account`, {
         withCredentials: true,
       })
       .then((res) => {
@@ -178,7 +178,7 @@ export default function Account() {
     account.photo || delete account["photo"];
     console.log(account);
     axios
-      .patch(`https://cat-dog-adoption.herokuapp.com/account`, account, {
+      .patch(`https://glittery-queijadas-ca1b16.netlify.app/account`, account, {
         withCredentials: true,
       })
       .then((res) => {

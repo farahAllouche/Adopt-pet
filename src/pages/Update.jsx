@@ -41,7 +41,7 @@ export default function Update() {
     dispatch(switchBg(false));
     axios
       .post(
-        `https://cat-dog-adoption.herokuapp.com/pets/`,
+        `https://glittery-queijadas-ca1b16.netlify.app/pets/`,
         { id: petId },
         {
           withCredentials: true,
@@ -116,9 +116,13 @@ export default function Update() {
   const toDataBase = (newPet) => {
     console.log(newPet);
     axios
-      .put(`https://cat-dog-adoption.herokuapp.com/pets/update`, newPet, {
-        withCredentials: true,
-      })
+      .put(
+        `https://glittery-queijadas-ca1b16.netlify.app/pets/update`,
+        newPet,
+        {
+          withCredentials: true,
+        }
+      )
       .then((res) => {
         setLoading(false);
         if (!newPet.photo) newPet.photo = pet.photo;

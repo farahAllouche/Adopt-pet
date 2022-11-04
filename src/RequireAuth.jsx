@@ -7,7 +7,7 @@ export default function RequireAuth(props) {
 
   useEffect(() => {
     axios
-      .get(`https://cat-dog-adoption.herokuapp.com/session`, {
+      .get(`https://glittery-queijadas-ca1b16.netlify.app/session`, {
         withCredentials: true,
       })
       .then((res) => {

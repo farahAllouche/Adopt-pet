@@ -14,7 +14,7 @@ export default function User() {
     dispatch(switchBg(false));
     axios
       .post(
-        `https://cat-dog-adoption.herokuapp.com/user`,
+        `https://glittery-queijadas-ca1b16.netlify.app/user`,
         { userId: userId },
         {
           withCredentials: true,

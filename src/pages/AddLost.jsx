@@ -95,9 +95,13 @@ export default function AddLost({ pet = {} }) {
 
   const toDataBase = (lostPet) => {
     axios
-      .post(`https://cat-dog-adoption.herokuapp.com/lostPet/add`, lostPet, {
-        withCredentials: true,
-      })
+      .post(
+        `https://glittery-queijadas-ca1b16.netlify.app/lostPet/add`,
+        lostPet,
+        {
+          withCredentials: true,
+        }
+      )
       .then((res) => {
         setLoading(false);
         dispatch(addLostPet(res.data));

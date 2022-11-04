@@ -23,7 +23,7 @@ export default function Description() {
     dispatch(switchBg(false));
     axios
       .post(
-        `https://cat-dog-adoption.herokuapp.com/pets/`,
+        `https://glittery-queijadas-ca1b16.netlify.app/pets/`,
         { id: petId },
         {
           withCredentials: true,
