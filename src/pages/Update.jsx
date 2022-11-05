@@ -41,7 +41,7 @@ export default function Update() {
     dispatch(switchBg(false));
     axios
       .post(
-        `https://cat-dog-adoption.herokuapp.com/pets/`,
+        `http://localhost:4000/pets/`,
         { id: petId },
         {
           withCredentials: true,
@@ -116,7 +116,7 @@ export default function Update() {
   const toDataBase = (newPet) => {
     console.log(newPet);
     axios
-      .put(`https://cat-dog-adoption.herokuapp.com/pets/update`, newPet, {
+      .put(`http://localhost:4000/pets/update`, newPet, {
         withCredentials: true,
       })
       .then((res) => {

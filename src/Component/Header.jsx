@@ -21,7 +21,7 @@ export default function Header({ setSideBar, sideBar, style }) {
 
   function handleLogout() {
     axios
-      .delete(`https://glittery-queijadas-ca1b16.netlify.app/logout`, {
+      .delete(`http://localhost:4000/logout`, {
         withCredentials: true,
       })
       .then((res) => {
@@ -64,7 +64,7 @@ export default function Header({ setSideBar, sideBar, style }) {
         <nav className="main-nav">
           <div className="logo-img">
             <Link to="/">
-              <img src="./../../images/bg-image.jpg"></img>
+              <img src="/images/logo.png"></img>
             </Link>
           </div>
           <ul className="nav-links">

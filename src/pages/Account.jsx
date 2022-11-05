@@ -103,7 +103,7 @@ export default function Account() {
 
   useEffect(() => {
     axios
-      .get(`https://cat-dog-adoption.herokuapp.com/account`, {
+      .get(`http://localhost:4000/account`, {
         withCredentials: true,
       })
       .then((res) => {
@@ -178,7 +178,7 @@ export default function Account() {
     account.photo || delete account["photo"];
     console.log(account);
     axios
-      .patch(`https://cat-dog-adoption.herokuapp.com/account`, account, {
+      .patch(`http://localhost:4000/account`, account, {
         withCredentials: true,
       })
       .then((res) => {
@@ -413,8 +413,8 @@ export default function Account() {
                       fullWidth
                       name="password"
                       size="small"
-                      value={newPassword}
                       type="password"
+                      value={""}
                       onChange={(e) => setNewPassword(e.target.value)}
                     />
 

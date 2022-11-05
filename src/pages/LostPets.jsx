@@ -68,7 +68,7 @@ export default function LostPets({ theme }) {
             </Button>
           </Link>
         </div>
-        <div>
+        <div className="LostPetsContainer">
           {DispalyLostPets.map((pet) => {
             return <CardLost pet={pet} key={pet.id}></CardLost>;
           })}

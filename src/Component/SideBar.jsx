@@ -51,7 +51,7 @@ export default function SideBar({ setSideBar, sideBar }) {
             </ul>
           </div>
           <div className="img-dog">
-            <img src="./dog.png"></img>
+            <img src="/images/dog.png"></img>
           </div>
         </div>
       </IconContext.Provider>

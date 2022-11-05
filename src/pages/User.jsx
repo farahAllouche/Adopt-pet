@@ -14,7 +14,7 @@ export default function User() {
     dispatch(switchBg(false));
     axios
       .post(
-        `https://cat-dog-adoption.herokuapp.com/user`,
+        `http://localhost:4000/user`,
         { userId: userId },
         {
           withCredentials: true,

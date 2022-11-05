@@ -55,7 +55,7 @@ function App() {
   useEffect(() => {
     console.log("useEffect");
     axios
-      .get(`https://cat-dog-adoption.herokuapp.com/account`, {
+      .get(`http://localhost:4000/account`, {
         withCredentials: true,
       })
       .then((res) => {
@@ -73,7 +73,7 @@ function App() {
   useEffect(() => {
     isLogged &&
       axios
-        .get(`https://cat-dog-adoption.herokuapp.com/pets/`, {
+        .get(`http://localhost:4000/pets/`, {
           withCredentials: true,
         })
         .then((res) => {
@@ -86,7 +86,7 @@ function App() {
   useEffect(() => {
     isLogged &&
       axios
-        .get(`https://cat-dog-adoption.herokuapp.com/lostPet/`, {
+        .get(`http://localhost:4000/lostPet/`, {
           withCredentials: true,
         })
         .then((res) => {
@@ -98,7 +98,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get(`https://cat-dog-adoption.herokuapp.com/account`, {
+      .get(`http://localhost:4000/account`, {
         withCredentials: true,
       })
       .then((res) => {

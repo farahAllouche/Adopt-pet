@@ -31,7 +31,7 @@ export default function DraggableDialog({ petId }) {
 
   function handleDelete() {
     axios
-      .delete(`https://cat-dog-adoption.herokuapp.com/pets/delete/${petId}`, {
+      .delete(`http://localhost:4000/pets/delete/${petId}`, {
         withCredentials: true,
       })
       .then((res) => {

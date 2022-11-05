@@ -66,7 +66,7 @@ export default function Rehome() {
 
   const toDataBase = (newPet) => {
     axios
-      .post(`https://cat-dog-adoption.herokuapp.com/pets/add`, newPet, {
+      .post(`http://localhost:4000/pets/add`, newPet, {
         withCredentials: true,
       })
       .then((res) => {

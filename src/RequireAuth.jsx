@@ -7,7 +7,7 @@ export default function RequireAuth(props) {
 
   useEffect(() => {
     axios
-      .get(`https://cat-dog-adoption.herokuapp.com/session`, {
+      .get(`http://localhost:4000/session`, {
         withCredentials: true,
       })
       .then((res) => {

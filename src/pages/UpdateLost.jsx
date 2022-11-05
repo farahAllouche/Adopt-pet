@@ -71,7 +71,7 @@ export default function AddLost() {
     dispatch(switchBg(false));
     axios
       .post(
-        `https://cat-dog-adoption.herokuapp.com/Lostpet/`,
+        `http://localhost:4000/Lostpet/`,
         { id: petId },
         {
           withCredentials: true,
@@ -128,13 +128,9 @@ export default function AddLost() {
 
   const toDataBase = (lostPet) => {
     axios
-      .put(
-        `https://cat-dog-adoption.herokuapp.com/lostPet/update/${petId}`,
-        lostPet,
-        {
-          withCredentials: true,
-        }
-      )
+      .put(`http://localhost:4000/lostPet/update/${petId}`, lostPet, {
+        withCredentials: true,
+      })
       .then((res) => {
         setLoading(false);
         console.log("lostPet", lostPet);

@@ -35,7 +35,7 @@ export default function Register() {
     setError("");
     axios
       .post(
-        `https://cat-dog-adoption.herokuapp.com/register`,
+        `http://localhost:4000/register`,
         { email, password, name },
         {
           withCredentials: true,

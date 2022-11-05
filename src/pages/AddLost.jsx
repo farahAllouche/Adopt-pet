@@ -95,7 +95,7 @@ export default function AddLost({ pet = {} }) {
 
   const toDataBase = (lostPet) => {
     axios
-      .post(`https://cat-dog-adoption.herokuapp.com/lostPet/add`, lostPet, {
+      .post(`http://localhost:4000/lostPet/add`, lostPet, {
         withCredentials: true,
       })
       .then((res) => {

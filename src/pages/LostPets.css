@@ -25,3 +25,9 @@
 .appBar {
     max-width: 300px;
 }
+
+.lost-pet-page .LostPetsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
