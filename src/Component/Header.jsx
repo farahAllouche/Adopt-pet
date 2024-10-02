@@ -21,7 +21,7 @@ export default function Header({ setSideBar, sideBar, style }) {
 
   function handleLogout() {
     axios
-      .delete(`http://localhost:4000/logout`, {
+      .delete(`https://adopt-pet-be.onrender.com/logout`, {
         withCredentials: true,
       })
       .then((res) => {

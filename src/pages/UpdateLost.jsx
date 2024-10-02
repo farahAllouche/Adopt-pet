@@ -71,7 +71,7 @@ export default function AddLost() {
     dispatch(switchBg(false));
     axios
       .post(
-        `http://localhost:4000/Lostpet/`,
+        `https://adopt-pet-be.onrender.com/Lostpet/`,
         { id: petId },
         {
           withCredentials: true,
@@ -128,9 +128,13 @@ export default function AddLost() {
 
   const toDataBase = (lostPet) => {
     axios
-      .put(`http://localhost:4000/lostPet/update/${petId}`, lostPet, {
-        withCredentials: true,
-      })
+      .put(
+        `https://adopt-pet-be.onrender.com/lostPet/update/${petId}`,
+        lostPet,
+        {
+          withCredentials: true,
+        }
+      )
       .then((res) => {
         setLoading(false);
         console.log("lostPet", lostPet);

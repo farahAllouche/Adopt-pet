@@ -31,7 +31,7 @@ export default function DraggableDialog({ petId }) {
 
   function handleDelete() {
     axios
-      .delete(`http://localhost:4000/pets/delete/${petId}`, {
+      .delete(`https://adopt-pet-be.onrender.com/pets/delete/${petId}`, {
         withCredentials: true,
       })
       .then((res) => {

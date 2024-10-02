@@ -7,7 +7,7 @@ export default function RequireAuth(props) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/session`, {
+      .get(`https://adopt-pet-be.onrender.com/session`, {
         withCredentials: true,
       })
       .then((res) => {

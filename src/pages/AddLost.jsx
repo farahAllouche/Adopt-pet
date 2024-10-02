@@ -95,7 +95,7 @@ export default function AddLost({ pet = {} }) {
 
   const toDataBase = (lostPet) => {
     axios
-      .post(`http://localhost:4000/lostPet/add`, lostPet, {
+      .post(`https://adopt-pet-be.onrender.com/lostPet/add`, lostPet, {
         withCredentials: true,
       })
       .then((res) => {

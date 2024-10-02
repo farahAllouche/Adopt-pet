@@ -76,7 +76,7 @@ export default function CardLost({ pet }) {
   useEffect(() => {
     axios
       .post(
-        `http://localhost:4000/user`,
+        `https://adopt-pet-be.onrender.com/user`,
         { userId: pet.userId },
         {
           withCredentials: true,
@@ -99,7 +99,7 @@ export default function CardLost({ pet }) {
 
   function handleDelete() {
     axios
-      .delete(`http://localhost:4000/lostPet/delete/${pet.id}`, {
+      .delete(`https://adopt-pet-be.onrender.com/lostPet/delete/${pet.id}`, {
         withCredentials: true,
       })
       .then((res) => {

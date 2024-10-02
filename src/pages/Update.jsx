@@ -41,7 +41,7 @@ export default function Update() {
     dispatch(switchBg(false));
     axios
       .post(
-        `http://localhost:4000/pets/`,
+        `https://adopt-pet-be.onrender.com/pets/`,
         { id: petId },
         {
           withCredentials: true,
@@ -116,7 +116,7 @@ export default function Update() {
   const toDataBase = (newPet) => {
     console.log(newPet);
     axios
-      .put(`http://localhost:4000/pets/update`, newPet, {
+      .put(`https://adopt-pet-be.onrender.com/pets/update`, newPet, {
         withCredentials: true,
       })
       .then((res) => {

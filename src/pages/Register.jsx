@@ -35,7 +35,7 @@ export default function Register() {
     setError("");
     axios
       .post(
-        `http://localhost:4000/register`,
+        `https://adopt-pet-be.onrender.com/register`,
         { email, password, name },
         {
           withCredentials: true,

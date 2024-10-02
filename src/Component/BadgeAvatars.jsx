@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function BadgeAvatars({ photo = "../images/avatar.jpg" }) {
+export default function BadgeAvatars({ photo = "/images/avatar.jpg" }) {
   const classes = useStyles();
 
   return (
@@ -60,7 +60,7 @@ export default function BadgeAvatars({ photo = "../images/avatar.jpg" }) {
       >
         <Avatar
           alt="Remy Sharp"
-          src={photo ? photo : "../images/avatar.jpg"}
+          src={photo ? photo : "/images/avatar.jpg"}
           className={classes.large}
         />
       </StyledBadge>

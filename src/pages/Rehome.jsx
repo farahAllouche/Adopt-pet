@@ -66,7 +66,7 @@ export default function Rehome() {
 
   const toDataBase = (newPet) => {
     axios
-      .post(`http://localhost:4000/pets/add`, newPet, {
+      .post(`https://adopt-pet-be.onrender.com/pets/add`, newPet, {
         withCredentials: true,
       })
       .then((res) => {
